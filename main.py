@@ -38,8 +38,9 @@ class Window(QMainWindow):
 
         self.main_layout.addLayout(self.notes_layout)
         self.main_layout.addLayout(self.work_layout)
-        self.notes_layout.addWidget(QPushButton('Фильтр',
-                                                clicked=self.filter))
+        button = QPushButton('Фильтр', clicked=self.filter)
+        button.setIcon(QIcon('setting/filter.png'))
+        self.notes_layout.addWidget(button)
         widget.setLayout(self.main_layout)
         self.setCentralWidget(widget)
 
