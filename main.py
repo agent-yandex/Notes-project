@@ -60,6 +60,7 @@ class Window(QMainWindow):
         self.save_note_action.setStatusTip('Сохранить')
         self.save_note_action.triggered.connect(self.save_note)
         self.save_note_action.setEnabled(False)
+        self.delete_note_action.setShortcut(QKeySequence("Ctrl+Space"))
 
         self.undo_action = QAction(
             QIcon('setting/arrow-curve-180-left.png'), 'Отменить', self)
